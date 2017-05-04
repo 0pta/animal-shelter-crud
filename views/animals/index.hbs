@@ -1,0 +1,26 @@
+
+      {{#each allAnimals}}
+      <div class="row">
+				<div class="col-xs-3">
+          <img class="thumbnail" src="{{this.img_url}}" alt="">
+				</div>
+				<div class="col-xs-8">
+          <br>
+          <ul>
+            <li>Name: <a href="/animals/show/{{this.id}}">{{this.name}}</a></li>
+            <li>KIND: {{this.kind}}</li>
+            <li>AGE: {{this.age}}</li>
+            <li>{{this.description}}</li>
+            <li>ADOPTED? <input type="checkbox" name="adopted" {{#if this.is_adopted}}checked="true"{{/if}} value="{{this.is_adopted}}"></li>
+          </ul>
+
+          <br>
+          <br>
+          <form class="" action="animals/{{this.id}}?_method=DELETE" method="POST">
+            <input type="submit" class="btn btn-danger" name="delete" value="Delete">
+
+            <button type="button" class="btn btn-info"><a href="animals/edit/{{this.id}}">Edit</a></button>
+          </form>
+				</div>
+			</div>
+      {{/each}}

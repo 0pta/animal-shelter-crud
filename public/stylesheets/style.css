@@ -4,5 +4,15 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: darkblue;
+}
+
+img {
+  margin: 5px;
+  height: 195px;
+  width: 225px;
+}
+
+#navbrand {
+  color: darkblue;
 }

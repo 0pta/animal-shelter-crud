@@ -1,0 +1,29 @@
+
+<form method="POST" action="/animals/{{newAnimal.id}}"  >
+  <div class="form-group">
+    <label for="image">Image</label>
+    <input type="text" class="form-control" id="" placeholder="img_url" name="img_url">
+  </div>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Name" name="name">
+  </div>
+  <div class="form-group">
+    <label for="kind">Kind</label>
+    <input type="text" id="kind" name="kind">
+  </div>
+  <div class="form-group">
+    <label for="kind">Age</label>
+    <input type="number" id="age" name="age">
+  </div>
+  <div class="form-group">
+    <label for="kind">Description</label>
+    <input type="text" id="description" name="description">
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" name="is_adopted"> Adopted
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>

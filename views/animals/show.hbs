@@ -1,0 +1,30 @@
+<a href="/animals">Back to all animals</a>
+
+<table class="table table-striped">
+  <tr>
+    <th>Image</th>
+    <th>Name</th>
+    <th>Kind</th>
+    <th>Age</th>
+    <th>Description</th>
+    <th>Available For Adoption</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>{{animal.name}}</td>
+    <td><img src="{{animal.img_url}}"></td>
+    <td>{{animal.kind}}</td>
+    <td>{{animal.age}}</td>
+    <td>{{animal.description}}</td>
+    <td><input type="checkbox" name="adopted" {{#if animal.is_adopted}}checked="true"{{/if}} value="{{animal.is_adopted}}"></td>
+    <td>
+    <td><form class="" action="/animals/{{animal.id}}?_method=DELETE" method="POST">
+      <input type="submit" class="btn btn-danger" name="delete" value="Delete"></input></th>
+    </form>
+    <th><button type="button" class="btn btn-info"><a href="/animals/edit/{{animal.id}}">Edit</a></button></th>
+  </th>
+</tr>
+
+
+</table>

@@ -1,0 +1,30 @@
+<a href="/animals">Back to all animals</a>
+
+<form method="POST" action="/animals/{{animal.id}}?_method=PUT">
+  <div class="form-group">
+    <label for="image">Image</label>
+    <input type="text" class="form-control" id="" placeholder="img_url" name="img_url" value="{{animal.img_url}}">
+  </div>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Name" name="name" value="{{animal.name}}">
+  </div>
+  <div class="form-group">
+    <label for="kind">Kind</label>
+    <input type="text" id="kind" name="kind" value="{{animal.kind}}">
+  </div>
+  <div class="form-group">
+    <label for="kind">Age</label>
+    <input type="number" id="age" name="age" value="{{animal.age}}">
+  </div>
+  <div class="form-group">
+    <label for="kind">Description</label>
+    <input type="text" id="description" name="description" value="{{animal.description}}">
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" name="is_adopted" value="{{animal.is_adopted}}"> Adopted
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
